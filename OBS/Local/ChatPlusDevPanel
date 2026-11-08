@@ -1,0 +1,22 @@
+-- Fichier hébergé sur GitHub
+print("[GitHub LocalScript] Le script distant s'exécute avec succès !")
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer or Players.PlayerAdded:Wait()
+
+local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "GitHubTestGui"
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(0, 350, 0, 60)
+textLabel.Position = UDim2.new(0.5, -175, 0.2, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.TextSize = 20
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.Text = " Test GitHub réussi ! "
+
+textLabel.Parent = screenGui
+screenGui.Parent = playerGui
